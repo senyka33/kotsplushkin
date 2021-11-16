@@ -1,53 +1,89 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    outline: none;
+  margin: 0;
+  padding: 0;
+  outline: none;
 }
 
-body, html {
-    width: 100%;
-    height: 100%;
+body,
+html {
+  max-width: 1150px;
+  width: 100%;
+  height: 100%;
 }
 
 body {
-    background-image: url(img/background.jpg);
-    background-size: cover;
-    font-family: 'PT Sans Narrow';
+  background-image: url(img/background.jpg);
+  background-size: cover;
+  font-family: "PT Sans Narrow";
 }
 
-header {
-    width: 100%;
-    float: left;
-    position: fixed;
+.header {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 72px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #9f6c1c;
 }
 
-header #about {
-    width: 100%;
-    height: 72px;
-    float: left;
-    position: fixed;
-    background-color: #9f6c1c;
-    
+.navbar {
+  display: flex;
+  width: 100%;
+  margin-left: 10px;
 }
 
-header #about a{
-    color: white;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 29px 15px 0px 15px;
-    margin-top: 29px;
-    
+.navbar__item {
+  padding: 10px;
+  display: flex;
+  margin-right: 15px;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+.navbar__item:hover {
+  color: #f0a122;
 }
 
-main .logo {
-    width: 196px;
-    height: 212px;
-    padding-top: 89px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+.header__button {
+  margin-right: 20px;
+}
 
+/* Section advantage */
+.advantage {
+  display: flex;
+  flex-direction: column;
+  padding: 90px 0 90px 0;
+}
+
+.advantage__wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.advantage__logo {
+  width: 196px;
+  height: 212px;
+  margin: 0 auto;
+}
+.advantage-item {
+  max-width: 292px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+}
+.advantage-item__title {
+}
+
+.advantage-item__icon {
+  margin: 10px 0;
+}
+
+.advantage-item__text {
+  text-align: center;
 }
