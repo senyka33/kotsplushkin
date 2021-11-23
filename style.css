@@ -217,3 +217,61 @@ body {
 }
 
 
+/* Section - READY ORDER */
+.order {
+  display: flex;
+  max-width: 960px;
+  height: 267px;
+  width: 100%;
+  flex-basis: 100%;
+  background-image: url("./img/background-order-go.png");
+  margin: 36px auto;
+  justify-content: space-between;
+  
+}
+
+.order-item {
+  display: flex;
+  padding: 21px 68px 21px 325px;
+}
+
+.order-go {
+  padding: 39px 71px 60px 0px;
+  
+  
+}
+
+.order-go__title {
+  text-transform: uppercase;
+  font-size: 30px;
+  text-align: center;
+}
+
+.order-go__text {
+  padding: 7px 15px 35px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.order-go__link{
+  display: block;
+  max-width: 140px;
+  width: 100%;
+  color: #fff;
+  text-transform: uppercase;
+  background: #9f6c1c;
+  padding: 10px 10px;
+  border: none;
+  text-decoration: none;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 14px;
+  text-align: center;
+}
+
+.order-go__image-cat {
+  max-width: 184px;
+  
+}
+
+
