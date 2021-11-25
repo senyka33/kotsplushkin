@@ -274,4 +274,33 @@ body {
   
 }
 
+/* Section - FOOTER */
 
+.footer {
+  width: 100%;
+  height: 193px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #9f6c1c;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 65px;
+}
+
+.footer-item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-title {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.footer-button_link {
+  max-width: 43px;
+  width: 100%;
+} 
