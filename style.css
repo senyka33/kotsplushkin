@@ -298,9 +298,14 @@ body {
   font-size: 14px;
   text-transform: uppercase;
   color: white;
+  margin-bottom: 15px;
 }
 
 .footer-button_link {
   max-width: 43px;
   width: 100%;
 } 
+
+.footer-button_link:first-child {
+  margin-right: 10px;
+}
