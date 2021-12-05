@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Кот Сплюшкин</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/b563eeef31.js" crossorigin="anonymous"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body>
@@ -19,12 +20,13 @@
       <a class='navbar__item' href="#">Прайс-лист</a>
       <a class='navbar__item' href="#">Доставка и Оплата</a>
     </nav>
-    <div class="button_login">
-      <button class='header__button'>
-        <i class="fas fa-sign-in-alt"></i>
-        Вход
-      </button>
-    </div>
+
+    <button class='header__button'>
+      <span class="button_icon">
+        <ion-icon name="log-in-outline"></ion-icon>
+      </span>
+      <span class="button_text">Вход</span>
+    </button>
   </header>
   <main>
     <section class='advantage'>
