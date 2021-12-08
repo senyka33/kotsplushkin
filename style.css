@@ -283,6 +283,7 @@ html {
 
 .order-link {
   text-decoration: none;
+  text-align: center;
 }
 
 .order-link:hover {
@@ -292,7 +293,7 @@ html {
 
 .order-image_cat {
   max-width: 185px;
-}
+ }
 
 /* Section - FOOTER */
 
