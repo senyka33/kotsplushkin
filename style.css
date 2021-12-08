@@ -47,7 +47,7 @@ body {
 
 .common-button:hover {
   background-color: #6b4913;
-  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 
 /* /Common */
@@ -241,7 +241,6 @@ body {
   margin-right: 20px;
 }
 
-
 /* Section - READY ORDER */
 .order {
   display: flex;
@@ -277,7 +276,7 @@ body {
   text-align: center;
 }
 
-.order-link{
+.order-go__link {
   display: block;
   max-width: 140px;
   width: 100%;
@@ -303,7 +302,6 @@ body {
 }
 
 /* Section - FOOTER */
-
 .footer {
   width: 100%;
   background-color: #9f6c1c;
@@ -330,12 +328,8 @@ body {
 .footer-button_link {
   max-width: 40px;
   width: 100%;
-} 
+}
 
 .footer-button_link:first-child {
   margin-right: 10px;
-}
-
-.footer-button_link:hover {
-  transform: scale(1.2);
 }
