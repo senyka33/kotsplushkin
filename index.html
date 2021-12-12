@@ -7,30 +7,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Кот Сплюшкин</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body>
   <header class='header'>
-    <nav class="navbar">
-      <a class='navbar__item' href="#">Информация</a>
-      <a class='navbar__item' href="#">Новости</a>
-      <a class='navbar__item' href="#">Акции</a>
-      <a class='navbar__item' href="#">Прайс-лист</a>
-      <a class='navbar__item' href="#">Доставка и Оплата</a>
-    </nav>
-
-    <button class='header__button'>
-      <span class="button_icon">
-        <ion-icon name="log-in-outline"></ion-icon>
-      </span>
-      <span class="button_text">Вход</span>
-    </button>
+    <div class="navbar-wrapper container">
+      <nav class="navbar">
+        <a class='navbar__item' href="#">Информация</a>
+        <a class='navbar__item' href="#">Новости</a>
+        <a class='navbar__item' href="#">Акции</a>
+        <a class='navbar__item' href="#">Прайс-лист</a>
+        <a class='navbar__item' href="#">Доставка и Оплата</a>
+      </nav>
+      <button class='header__button'>
+        <span class="button_icon">
+          <ion-icon name="log-in-outline"></ion-icon>
+        </span>
+        <span class="button_text">Вход</span>
+      </button>
+    </div>
   </header>
   <main>
-    <section class='advantage'>
-      <img class="advantage__logo" src="img/kot.png" alt="Логотип сайта Кот Сплюшкин">
+    <section class='advantage container'>
+      <div class="advantage__logo-container">
+        <img class="advantage__logo" src="img/kot.png" alt="Логотип сайта Кот Сплюшкин">
+      </div>
       <div class="advantage__wrapper">
         <div class="advantage-item">
           <h2 class="advantage-item__title">Быстро</h2>
@@ -58,7 +64,7 @@
         </div>
       </div>
     </section>
-    <section class="splushkin-info">
+    <section class="splushkin-info container">
       <div class="splushkin-news">
         <h2 class="splushkin-news__title">Новости</h2>
         <ul class="news-items">
@@ -75,9 +81,9 @@
             <p class="news-item__text">При заказе котика на сайте Куфар, действует скидка 20%!</p>
           </li>
         </ul>
-        <button class="common-button">
-          <a class="news-item__link" href="#">Все новости</a>
-        </button>
+        <a class="news-item__link common-button" href="#">
+          Все новости
+        </a>
       </div>
       <div class="border-line">
         <img src="img/vertical-line.png" alt="Линия">
@@ -93,7 +99,7 @@
         </div>
       </div>
     </section>
-    <section class="order">
+    <section class="order container">
       <div class="order-item">
         <div class="order-header">
           <h2 class="order-title">Готовы сделать заказ?</h2>
@@ -112,14 +118,16 @@
     </section>
   </main>
   <footer class="footer">
-    <p class="footer-title">Давайте дружить!</p>
-    <div class="footer-item">
-      <a class="footer-button_link" href="https://www.instagram.com/kot_splushkin/" target="_blank">
-        <img src="./img/instagram.png" class="footer-button_instagram">
-      </a>
-      <a class="footer-button_link" href="https://www.instagram.com/kot_splushkin/" target="_blank">
-        <img src="./img/kufar.png" class="footer-button_instagram">
-      </a>
+    <div class="footer-wrapper container">
+      <p class="footer-title">Давайте дружить!</p>
+      <div class="footer-item">
+        <a class="footer-button_link" href="https://www.instagram.com/kot_splushkin/" target="_blank">
+          <img src="./img/instagram.png" class="footer-button_instagram">
+        </a>
+        <a class="footer-button_link" href="https://www.instagram.com/kot_splushkin/" target="_blank">
+          <img src="./img/kufar.png" class="footer-button_instagram">
+        </a>
+      </div>
     </div>
   </footer>
 </body>
