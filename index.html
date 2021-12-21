@@ -12,7 +12,9 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
 </head>
 
 
@@ -88,12 +90,9 @@
       </div>
       <div class="splushkin-gallery">
         <h2 class="splushkin-gallery__title">Фотогалерея</h2>
-        <div class="carousel">
-          <img class="carousel__item" src="img/1.jpg" alt="Пример готового котика">
-        </div>
-        <div class="splushkin-button_container">
-          <button class="splushkin-gallery-button common-button" type="button">Назад</button>
-          <button class="splushkin-gallery-button common-button" type="button">Вперёд</button>
+        <div class="fotorama" data-width="300px">
+          <img src="img/2.jpg">
+          <img src="img/3.jpg">
         </div>
       </div>
     </section>
@@ -128,6 +127,7 @@
       </div>
     </div>
   </footer>
+
 </body>
 
 </html>
