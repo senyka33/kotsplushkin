@@ -51,18 +51,15 @@ html {
 /* /Common */
 
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: fixed;
   width: 100%;
   height: 70px;
   background-color: #9f6c1c;
   box-shadow: 0 0 10px rgba(80, 79, 79, 0.5);
   z-index: 1;
-}
-
-nav{
-  text-align: center;
-  margin-top: 25px;
-  
 }
 
 .topnav a {
@@ -76,10 +73,6 @@ nav{
 .topnav a:hover {
   color: #f0a122;
 }
-.topnav a.icon {
-  display: none;
-}
- 
 
 /* Section advantage */
 .advantage {
@@ -319,7 +312,7 @@ nav{
 
 /* Оформление всплывающих окон */
 
-.popup {
+/* .popup {
   position: fixed;
   top: 0;
   left: 0;
@@ -349,50 +342,84 @@ nav{
     border: none;
     background-color: transparent;
     color: white;
+  } */
+.bgmenu {
+  opacity: 0;
+  width: 70px;
+  height: 70px;
+  position: relative;
+  display: block;
+  margin: -2px 0px;
+}
+
+.bgmenu span {
+  width: 30px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-100%);
+  transition: transform 0.5s;
   }
 
-@media screen and (max-width: 594px) {
+.bgmenu span:nth-of-type(2) {
+   top:calc(50% + 5px);
+ }
+  
+.bgmenu span:nth-of-type(3) {
+   top:calc(50% - 5px);
+ }
+
+ .bgmenu.active span:first-of-type {
+  opacity: 0;
+ }
+
+ .bgmenu.active span:nth-of-type(2) {
+   top:50%;
+   transform: translate(-100%) rotate(45deg);
+ }
+
+ .bgmenu.active span:nth-of-type(3) {
+  top: 50%;
+  transform: translate(-100%) rotate(-45deg);
+}
+
+@media screen and (max-width: 675px) {
   .topnav a {
     display: none;
   }
-  .topnav a.icon {
-    float: right;
-    display: block;
-    color: white;
-    font-size: 25px;
-    text-decoration: none;
-    
-  } 
-  nav {
-    width: 100%;
-  }
-  
-  .topnav {
-    margin-top: -20px;
+
+  header:first-child {
+    justify-content: flex-end;
   }
 
-  .topnav.responsive {
-    position: relative;
+  header .topnav.active {
+    height: 100vh;
+    background-color: #9f6c1c;
+    transition:background-color 0.5s;
+  }
+
+  .bgmenu {
+    opacity: 1;
+  }
+  .topnav {
+    display: inline-block;
+    margin: 0 auto;
+    margin-top: -20px;
+    width: 100%;
+  }
+
+  .topnav.active {
+    position: absolute;
     top: 75px;
     left: 0px;
     margin-top: -30px;
   }
-  
-  header .topnav.responsive {
-    height: 200px;
-    background-color: #9f6c1c;
-  }
 
-  .topnav.responsive a.icon {
-    padding-top: 20px;
-    position: absolute;
-    top: -75px;
-    right: 0px;
-  }
-
-  .topnav.responsive a {
-    float: none;
+  .topnav.active a {
     display: block;
+    text-align: center;
   }
 
   .advantage-item__title {

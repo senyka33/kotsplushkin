@@ -1,10 +1,7 @@
-menu.onclick = function myFunction() {
-    var x = document.getElementById('myTopnav');
+let burger = document.querySelector('.bgmenu');
+let menu = document.querySelector('.topnav');
+burger.addEventListener('click', function () {
+    burger.classList.toggle('active');
+    menu.classList.toggle('active');
+})
 
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-
-}
