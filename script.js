@@ -1,3 +1,5 @@
+//Бургер меню 
+
 let burger = document.querySelector('.bgmenu');
 let menu = document.querySelector('.topnav');
 burger.addEventListener('click', function () {
@@ -5,9 +7,19 @@ burger.addEventListener('click', function () {
     menu.classList.toggle('active');
 })
 
-let popups = document.querySelector('.popup');
-let btn = document.querySelector('.common-button btn');
-btn.addEventListener('click', function () {
-    popups.classList.toggle('show');
-})
+//Модальное окно Оформить заказ 
 
+let modal = document.getElementsByClassName("popup")[0];
+let btn = document.getElementsByClassName("common-button btn")[0];
+let close = document.getElementsByClassName("popup-close")[0];
+btn.onclick = function () {
+    modal.style.display = "block";
+}
+close.onclick = function () {
+    modal.style.display = "none";
+}
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}

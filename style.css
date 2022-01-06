@@ -43,6 +43,7 @@ html {
   transition: background 0.2s ease-in-out;
 }
 .common-button:hover {
+  cursor: pointer;
   background-color: #6b4913;
   transition: all 0.2s ease-in-out;
 }
@@ -314,7 +315,7 @@ header {
 .popup {
   display: none;
   position: fixed;
-  top: 0;
+  top: 0; 
   left: 0;
   right: 0;
   bottom: 0;
@@ -323,15 +324,11 @@ header {
   z-index: 9;
   background-color: rgba(0, 0, 0, 0.5);
   }
-  .popup.show {
-    display: block;
-  }
-
   .popup-content {
     position: fixed;
     text-align: left;
     left: 50%;
-    top: 20%;
+    top: 15%;
     transform: translateX(-50%);
     padding: 40px 50px;
     background-color: white;
@@ -348,6 +345,9 @@ header {
     border: none;
     background-color: transparent;
     color: white;
+  }
+  .popup-close:hover {
+    cursor: pointer;
   }
   .popup-header {
     text-transform: uppercase;
@@ -552,5 +552,18 @@ header {
   }
   .advantage {
     padding-bottom: 40px;
+  }
+  .popup-content {
+    position: fixed;
+    width: 90%;
+    text-align: left;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    padding: 40px 10px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid;
+    line-height: 35px;
   }
 }
