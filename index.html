@@ -20,7 +20,6 @@
 
 <body>
   <header>
-
     <div class="topnav" id="myTopnav">
       <a href="#">Информация</a>
       <a href="#">Новости</a>
@@ -28,7 +27,6 @@
       <a href="#">Прайс-лист</a>
       <a href="#">Доставка и Оплата</a>
     </div>
-
     <div class="bgmenu">
       <span></span>
       <span></span>
@@ -106,11 +104,11 @@
           <h2 class="order-title">Готовы сделать заказ?</h2>
           <p class="order-text">Заполните простую форму для заказа и ожидайте SMS-подтверждение заказа на своём
             телефоне!</p>
-          <a href="formazakaza.html">
-            <button class="common-button">
-              Форма для заказа
-            </button>
-          </a>
+
+          <button class="common-button btn">
+            Форма для заказа
+          </button>
+
         </div>
         <div class="order-image">
           <img class="order-image_cat" src="img/cat.png" alt="Лого котика">
@@ -126,13 +124,56 @@
           <p class="popup-text">Заполните все поля для заказа котика</p>
           <div class="popup-form">
             <form action="#">
-              <p class="popup-form-text">Ваше имя: <input type="text"></p>
-              <button class="btn-form" type="submit">Оставить заявку</button>
+              <p class="popup-form-text">Ваше имя: <input type="text" class="popup-form-in"></p>
+              <p class="popup-form-text">Ваша фамилия: <input type="text" class="popup-form-in"></p>
+              <p class="popup-form-text">Ваш номер телефона: <input type="number" class="popup-form-in"
+                  placeholder="+375.. или 80.."></p>
+              <p class="popup-form-text">Цвет котика:
+                <input type="color" id="selectcolor" value="#ee0000" list="selectcolor" class="popup-form-in">
+                <datalist class="palette">
+                  <option>#ffffff</option>
+                  <option>#0000ff</option>
+                  <option>#FF0000</option>
+                  <option>#00FF00</option>
+                  <option>#FF69B4</option>
+                  <option>#FFFF00</option>
+                  <option>#00008B</option>
+                  <option>#000000</option>
+                </datalist>
+              </p>
+              <p class="popup-form-text">Надпись на котике: <input type="text" class="popup-form-in"></p>
+              <p class="popup-form-text">Цвет надписи:
+                <input type="color" id="selectcolortext" value=" " list="selectcolortext" class="popup-form-in">
+                <datalist class=" palette">
+                  <option>#ffffff</option>
+                  <option>#0000ff</option>
+                  <option>#FF0000</option>
+                  <option>#00FF00</option>
+                  <option>#FF69B4</option>
+                  <option>#FFFF00</option>
+                  <option>#00008B</option>
+                  <option>#000000</option>
+                </datalist>
+              </p>
+              <p class="popup-form-text"">Котик с яичками?
+                <label class=" switchEggs">
+                <input type="checkbox">
+                <span class="slider round popup-form-in-slider"></span>
+                </label>
+              </p>
+              <p class="popup-form-text">Котик с реничками?
+                <label class="switchEyelashes">
+                  <input type="checkbox">
+                  <span class="slider round popup-form-in-slider"></span>
+                </label>
+              </p>
+              <button class="btn-form common-button" type="submit">Оставить заявку</button>
             </form>
           </div>
         </div>
       </div>
     </div>
+
   </main>
   <footer class="footer">
     <div class="footer-wrapper container">

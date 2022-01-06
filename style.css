@@ -42,7 +42,6 @@ html {
   border: none;
   transition: background 0.2s ease-in-out;
 }
-
 .common-button:hover {
   background-color: #6b4913;
   transition: all 0.2s ease-in-out;
@@ -312,7 +311,8 @@ header {
 
 /* Оформление всплывающих окон */
 
-/* .popup {
+.popup {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -323,15 +323,21 @@ header {
   z-index: 9;
   background-color: rgba(0, 0, 0, 0.5);
   }
+  .popup.show {
+    display: block;
+  }
+
   .popup-content {
     position: fixed;
-    text-align: center;
+    text-align: left;
     left: 50%;
     top: 20%;
     transform: translateX(-50%);
     padding: 40px 50px;
     background-color: white;
     border-radius: 5px;
+    border: 1px solid;
+    line-height: 35px;
   }
   .popup-close {
     position: absolute;
@@ -342,17 +348,115 @@ header {
     border: none;
     background-color: transparent;
     color: white;
-  } */
-.bgmenu {
+  }
+  .popup-header {
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .popup-text {
+    padding-bottom: 5px; 
+    text-align: center;
+  }
+  .popup-form-text {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+  }
+  .popup-form-in {
+    margin-left: 15px;
+    width: 100%;
+  }
+  .popup-form-in-slider {
+    margin-left: 15px;
+  }
+  input[type="number"] {
+    appearance: textfield;
+  }
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    display: none;
+  }
+  .btn-form {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin-top: 10px;
+  }
+
+  /* The switch - the box around the slider */
+  .switchEggs {
+  position: relative;
+  display: inline-block;
+  width: 65px;
+  height: 22px;
+  }
+
+  /* Hide default HTML checkbox */
+  .switchEggs input {
+  display:none;
+  }
+  .switchEyelashes {
+  position: relative;
+  display: inline-block;
+  width: 65px;
+  height: 22px;
+  }
+
+  /* Hide default HTML checkbox */
+  .switchEyelashes input {
+  display:none;
+  }
+
+  /* The slider */
+  .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  } 
+  .slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  }
+  input:checked + .slider {
+  background-color: #9f6c1c;
+  }
+  input:focus + .slider {
+  box-shadow: 0 0 1px #9f6c1c;
+  }
+  input:checked + .slider:before {
+  transform: translateX(26px);
+  }
+
+  /* Rounded sliders */
+  .slider.round {
+  border-radius: 15px;
+  }
+  .slider.round:before {
+  border-radius: 50%;
+  }
+
+  /* Burger Menu */
+
+  .bgmenu {
   opacity: 0;
   width: 70px;
   height: 70px;
   position: relative;
   display: block;
   margin: -2px 0px;
-}
-
-.bgmenu span {
+  }
+  .bgmenu span {
   width: 30px;
   height: 2px;
   background-color: white;
@@ -362,44 +466,37 @@ header {
   transform: translate(-100%);
   transition: transform 0.5s;
   }
-
-.bgmenu span:nth-of-type(2) {
+  .bgmenu span:nth-of-type(2) {
    top:calc(50% + 5px);
- }
-  
-.bgmenu span:nth-of-type(3) {
+  }
+  .bgmenu span:nth-of-type(3) {
    top:calc(50% - 5px);
- }
-
+  }
  .bgmenu.active span:first-of-type {
   opacity: 0;
- }
-
+  }
  .bgmenu.active span:nth-of-type(2) {
    top:50%;
    transform: translate(-100%) rotate(45deg);
- }
+  }
 
  .bgmenu.active span:nth-of-type(3) {
   top: 50%;
   transform: translate(-100%) rotate(-45deg);
-}
+  }
 
-@media screen and (max-width: 675px) {
+  @media screen and (max-width: 675px) {
   .topnav a {
     display: none;
   }
-
   header:first-child {
     justify-content: flex-end;
   }
-
   header .topnav.active {
     height: 100vh;
     background-color: #9f6c1c;
     transition:background-color 0.5s;
   }
-
   .bgmenu {
     opacity: 1;
   }
@@ -409,24 +506,20 @@ header {
     margin-top: -20px;
     width: 100%;
   }
-
   .topnav.active {
     position: absolute;
     top: 75px;
     left: 0px;
     margin-top: -30px;
   }
-
   .topnav.active a {
     display: block;
     text-align: center;
   }
-
   .advantage-item__title {
     text-align: center;
     font-size: 18px;
   }
-  
   .splushkin-info {
     flex-direction: column;
   }

@@ -5,3 +5,9 @@ burger.addEventListener('click', function () {
     menu.classList.toggle('active');
 })
 
+let popups = document.querySelector('.popup');
+let btn = document.querySelector('.common-button btn');
+btn.addEventListener('click', function () {
+    popups.classList.toggle('show');
+})
+
