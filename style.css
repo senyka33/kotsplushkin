@@ -584,6 +584,24 @@ header {
   top: 50%;
   transform: translate(-100%) rotate(-45deg);
   }
+  .upward {
+    position: fixed;
+    bottom: 700px;
+    right: 40px;
+    width: 70px;
+    height: 70px;
+    background: url("/img/up.png");
+    background-size: cover;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .upward.active {
+    bottom: 40px;
+    visibility: visible;
+    opacity: 1;
+  }
 
   @media screen and (max-width: 675px) {
   .topnav a {
