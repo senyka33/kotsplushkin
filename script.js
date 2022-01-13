@@ -35,3 +35,23 @@ function scrollTopTop() {
         behavior: 'smooth'
     })
 }
+
+// Появление элементов
+function onEntry(entry) {
+    entry.forEach(change => {
+        if (change.isIntersecting) {
+            change.target.classList.add('active');
+        }
+    });
+}
+
+let options = {
+    threshold: [0.1]
+};
+let observer = new IntersectionObserver(onEntry, options);
+let elements = document.querySelectorAll('.delivery-item, .price-item, .order-item, .splushkin-news, .splushkin-gallery');
+
+for (let elm of elements) {
+    observer.observe(elm);
+}
+
