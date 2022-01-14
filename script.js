@@ -1,4 +1,4 @@
-//Бургер меню 
+//Burger Menu
 
 let burger = document.querySelector('.bgmenu');
 let menu = document.querySelector('.topnav');
@@ -7,7 +7,7 @@ burger.addEventListener('click', function () {
     menu.classList.toggle('active');
 })
 
-//Модальное окно Оформить заказ 
+//Modal window Checkout
 
 let modal = document.getElementsByClassName("popup")[0];
 let btn = document.getElementsByClassName("common-button btn")[0];
@@ -24,7 +24,7 @@ window.onclick = function (event) {
     }
 }
 
-// Кнопка вверх
+//Button Up
 window.addEventListener('scroll', function () {
     let scroll = document.querySelector('.upward');
     scroll.classList.toggle("active", window.scrollY > 500);
@@ -36,22 +36,33 @@ function scrollTopTop() {
     })
 }
 
-// Появление элементов
-function onEntry(entry) {
-    entry.forEach(change => {
-        if (change.isIntersecting) {
-            change.target.classList.add('active');
-        }
-    });
+// Submit Order
+
+const form = document.querySelector('form');
+
+function retrieveFormValue(event) {
+    event.preventDefault();
+    const fname = form.querySelector('[name="fname"]'),
+        lname = form.querySelector('[name="lname"]'),
+        phone = form.querySelector('[name="phone"]'),
+        colorcat = form.querySelector('[name="colorcat"]'),
+        textincat = form.querySelector('[name="textincat"]'),
+        colortext = form.querySelector('[name="colortext"]'),
+        eggs = form.querySelector('[name=eggs]'),
+        eyelashes = form.querySelector('[name=eyelashes]');
+    const values = {
+        fname: fname.value,
+        lname: lname.value,
+        phone: phone.value,
+        colorcat: colorcat.value,
+        textincat: textincat.value,
+        colortext: colortext.value,
+        eggs: eggs.checked,
+        eyelashes: eyelashes.checked
+    };
+    console.log('v1', values);
+    form.reset();
 }
 
-let options = {
-    threshold: [0.1]
-};
-let observer = new IntersectionObserver(onEntry, options);
-let elements = document.querySelectorAll('.delivery-item, .price-item, .order-item, .splushkin-news, .splushkin-gallery');
-
-for (let elm of elements) {
-    observer.observe(elm);
-}
+form.addEventListener('submit', retrieveFormValue);
 

@@ -183,7 +183,7 @@
               <p class="delivery-text-price">= 10 BYN</p>
             </div>
             <div class="belpost-deliveryBox">
-              <p class="delivery-text">Доставка за пределы Беларуси <br> (Отделение -> Отделение)</p>
+              <p class="delivery-text">Доставка за пределы <br> Беларуси <br> (Отделение -> Отделение)</p>
               <p class="delivery-text-price">= 10 BYN</p>
             </div>
           </div>
@@ -200,7 +200,7 @@
           </div>
         </div>
         <div class="delivery-bottom">
-          <p>Оплата заказа при доставке по территории Беларуси производится в отделении Белпочты или Европочты(либо
+          <p>Оплата заказа при доставке по территории Беларуси производится в отделении Белпочты или Европочты (либо
             курьеру)</p>
           <p>В случае заказа котика за пределы Беларуси оплата производится на карту (100% суммы заказа)</p>
         </div>
@@ -228,51 +228,51 @@
         <h3 class="popup-header">Форма для заказа</h3>
         <p class="popup-text">Заполните все поля для заказа котика</p>
         <div class="popup-form">
-          <form action="#">
-            <p class="popup-form-text">Ваше имя: <input type="text" class="popup-form-in"></p>
-            <p class="popup-form-text">Ваша фамилия: <input type="text" class="popup-form-in"></p>
-            <p class="popup-form-text">Ваш номер телефона: <input type="number" class="popup-form-in"
+          <form id="form" action="#">
+            <p class="popup-form-text">Ваше имя: <input type="text" class="popup-form-in" name="fname"></p>
+            <p class="popup-form-text">Ваша фамилия: <input type="text" class="popup-form-in" name="lname"></p>
+            <p class="popup-form-text">Ваш номер телефона: <input type="number" class="popup-form-in" name="phone"
                 placeholder="+375.. или 80.."></p>
             <p class="popup-form-text">Цвет котика:
-              <input type="color" id="selectcolor" value="#ee0000" list="selectcolor" class="popup-form-in">
+              <input type="color" name="colorcat" list="selectcolor" class="popup-form-in">
               <datalist class="palette">
                 <option>#ffffff</option>
                 <option>#0000ff</option>
-                <option>#FF0000</option>
-                <option>#00FF00</option>
-                <option>#FF69B4</option>
-                <option>#FFFF00</option>
-                <option>#00008B</option>
+                <option>#ff0000</option>
+                <option>#00ff00</option>
+                <option>#ff69b4</option>
+                <option>#ffff00</option>
+                <option>#00008b</option>
                 <option>#000000</option>
               </datalist>
             </p>
-            <p class="popup-form-text">Надпись на котике: <input type="text" class="popup-form-in"></p>
+            <p class="popup-form-text">Надпись на котике: <input type="text" class="popup-form-in" name="textincat"></p>
             <p class="popup-form-text">Цвет надписи:
-              <input type="color" id="selectcolortext" value=" " list="selectcolortext" class="popup-form-in">
-              <datalist class=" palette">
+              <input type="color" name="colortext" list="selectcolor" class="popup-form-in">
+              <datalist class="palette">
                 <option>#ffffff</option>
                 <option>#0000ff</option>
-                <option>#FF0000</option>
-                <option>#00FF00</option>
-                <option>#FF69B4</option>
-                <option>#FFFF00</option>
-                <option>#00008B</option>
+                <option>#ff0000</option>
+                <option>#00ff00</option>
+                <option>#ff69b4</option>
+                <option>#ffff00</option>
+                <option>#00008b</option>
                 <option>#000000</option>
               </datalist>
             </p>
             <p class="popup-form-text"">Котик с яичками?
               <label class=" switchEggs">
-              <input type="checkbox">
+              <input type="checkbox" name="eggs">
               <span class="slider round popup-form-in-slider"></span>
               </label>
             </p>
             <p class="popup-form-text">Котик с реничками?
               <label class="switchEyelashes">
-                <input type="checkbox">
+                <input type="checkbox" name="eyelashes">
                 <span class="slider round popup-form-in-slider"></span>
               </label>
             </p>
-            <button class="btn-form common-button" type="submit">Оставить заявку</button>
+            <button id="submitorder" class="btn-form common-button" type="submit">Оставить заявку</button>
           </form>
         </div>
       </div>
@@ -281,5 +281,6 @@
   <div class="upward" onClick="scrollTopTop()"></div>
   <script src="script.js"></script>
 </body>
+
 
 </html>
