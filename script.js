@@ -60,7 +60,7 @@ function retrieveFormValue(event) {
         eggs: eggs.checked,
         eyelashes: eyelashes.checked
     };
-    console.log('v1', values);
+    console.log('OREDER', values);
     form.reset();
 }
 

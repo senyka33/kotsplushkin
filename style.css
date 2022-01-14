@@ -797,11 +797,6 @@ input:checked + .slider:before {
   header:first-child {
     justify-content: flex-end;
   }
-  header .topnav.active {
-    height: 100vh;
-    background-color: #9f6c1c;
-    transition: transform 1s;
-  }
   .bgmenu {
     opacity: 1;
   }
@@ -809,13 +804,17 @@ input:checked + .slider:before {
     margin: 0 auto;
     width: 100%;
     transform: translateX(670px);
+    transition: transform 1s;
   }
   .topnav.active {
+    height: 100vh;
+    background-color: #9f6c1c;
     position: absolute;
     top: 75px;
     left: 0px;
     margin-top: -30px;
     transform: translateX(0px);
+    transition: transform 1s;
   }
   .topnav.active a {
     display: block;
