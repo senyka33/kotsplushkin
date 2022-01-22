@@ -39,8 +39,7 @@ function scrollTopTop() {
 // Submit Order
 
 const form = document.querySelector('form');
-
-function retrieveFormValue(event) {
+function submitForm(event) {
     event.preventDefault();
     const fname = form.querySelector('[name="fname"]'),
         lname = form.querySelector('[name="lname"]'),
@@ -64,7 +63,7 @@ function retrieveFormValue(event) {
     form.reset();
 }
 
-form.addEventListener('submit', retrieveFormValue);
+form.addEventListener('submit', submitForm);
 
 // Scroll
 const links = document.querySelectorAll('.topnav a')

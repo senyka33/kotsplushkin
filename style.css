@@ -593,7 +593,7 @@ input[type="number"]::-webkit-inner-spin-button {
 /* Hide default HTML checkbox */
 
 .switchEggs input {
-  display:none;
+  display: none;
 }
 
 .switchEyelashes {
@@ -606,7 +606,7 @@ input[type="number"]::-webkit-inner-spin-button {
 /* Hide default HTML checkbox */
 
 .switchEyelashes input {
-  display:none;
+  display: none;
 }
 
 /* The slider */
@@ -678,11 +678,11 @@ input:checked + .slider:before {
 }
 
 .bgmenu span:nth-of-type(2) {
-   top:calc(50% + 5px);
+  top: calc(50% + 5px);
 }
 
 .bgmenu span:nth-of-type(3) {
-   top:calc(50% - 5px);
+  top: calc(50% - 5px);
 }
 
 .bgmenu.active span:first-of-type {
@@ -690,8 +690,8 @@ input:checked + .slider:before {
 }
 
 .bgmenu.active span:nth-of-type(2) {
-   top:50%;
-   transform: translate(-100%) rotate(45deg);
+  top: 50%;
+  transform: translate(-100%) rotate(45deg);
 }
 
 .bgmenu.active span:nth-of-type(3) {
@@ -722,17 +722,17 @@ input:checked + .slider:before {
 /* @MEDIA */
 
 @media screen and (max-width: 1160px) {
-.price-funnycat {
-  position: relative;
-  display: block;
-  margin: 0 auto;
-  top: 0;
-  right: 0;
+  .price-funnycat {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    top: 0;
+    right: 0;
+  }
+  .price-promotion {
+    padding-bottom: 20px;
+  }
 }
-.price-promotion {
-  padding-bottom: 20px;
-}
-
 @media screen and (max-width: 990px) {
   .delivery-text {
     font-size: 14px;
@@ -951,6 +951,7 @@ input:checked + .slider:before {
     display: block;
     width: 80%;
     margin: 0 auto;
+  }
 }
 
 @media screen and (max-width: 404px) {
